@@ -69,4 +69,20 @@ Please refer to the [result](./result.md) for the complete experimental results
 
 ## Large Language Model
 
-#### Data construction
+### Data construction
+The Java and C# data used in StarCoder's pretraining can be obtained from [bigcode/the-stack](https://huggingface.co/datasets/bigcode/the-stack), while the Java and C# data used in LLaMA's pretraining can be accessed via [bigquery](https://console.cloud.google.com/bigquery?ws=!1m4!1m3!3m2!1sbigquery-public-data!2sgithub_repos).
+
+
+Collect a large number of Java function snippets, then manually select 100 samples.
+```shell
+python extract-java.py
+```
+Collect a large number of matched Java–C# function pairs, perform an initial filtering using BLEU scores, and then manually select 100 pairs.
+```shell
+python extract-paired.py
+python cal-bleu.py
+```
+Collect a large number of paired NL-code examples, and then manually select those that are suitable for code generation tasks.
+```shell
+python extravt-paired.py
+```
