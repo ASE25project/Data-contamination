@@ -84,7 +84,7 @@ def get_functions_with_comments(code, parser):
     return functions
 
 
-# 写入 jsonl 文件
+
 file_index = 1
 entry_count = 0
 max_entries_per_file = 20000
