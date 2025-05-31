@@ -134,7 +134,7 @@ The large models used for inference are obtained from [Starcoder](https://huggin
 ```shell
 python infer.py
 ```
-使用eval_llm.py进行结果测试
+use eval_llm.py for evaluation
 ```shell
 python eval_llm.py
 ```
