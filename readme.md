@@ -84,8 +84,26 @@ python eval_plm.py
 
 #### GPT2-small
 
+For code_translation
+使用pre-train-pure.py进行无污染的预训练，修改 `output_dir` 指定模型输出位置。
+```shell
+cd gpt2/code_translation
+python pre-train-pure.py
+```
+使用pre-trian-contaminated.py进行单边污染的预训练,修改`pollution_file`与`pollution_type`以修改污染模式 （如：`test-java`代表污染测试集的java部分） 
+```shell
+python pre-train-contaminated.py
+```
+使用pre-train-contaminated-unpaired.py进行不成对污染的预训练
+```shell
+python pre-train-contaminated-unpaired.py
+```
+使用pre-train-contaminated-paired.py进行成对污染的预训练
+```shell
+python pre-train-contaminated-paired.py
+```
 
-
+For Code Generation
 
 
 ## Large Language Model
