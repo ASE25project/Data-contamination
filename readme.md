@@ -102,6 +102,14 @@ Perform pre-training with paired contamination using pre-train-contaminated-pair
 ```shell
 python pre-train-contaminated-paired.py
 ```
+Use `fine-tune-pure.py` to fintune pretrained model
+```shell
+python fine-tune-pure.py
+```
+Use `metric.py` for evluation
+```shell
+python metric.py
+```
 
 For Code Generation
 
