@@ -64,6 +64,10 @@ Please refer to the [result](./result.md) for the complete experimental results
 
 #### RoBERTa-base
 
+预训练使用的java数据可在[CodeSearchNet](https://huggingface.co/datasets/code-search-net/code_search_net/blob/main/data/java.zip)上获得，代码翻译任务的数据可在[CodeTrans](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/code-to-code-trans/data)上获得，为了方便起见，我们将其转化为json line格式，可以在[pretrain](./dataset/pretrain)里直接找到。代码生成任务的数据可在[Concode](https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code/text-to-code/dataset/concode)上获得。
+
+
+
 #### GPT2-small
 
 
@@ -86,3 +90,18 @@ Collect a large number of paired NL-code examples, and then manually select thos
 ```shell
 python extravt-paired.py
 ```
+
+We have provided samples in the [dataset](./dataset)
+
+### Infer
+
+The large models used for inference are obtained from [Starcoder](https://huggingface.co/bigcode/starcoderbase) and [Llama](https://huggingface.co/alexl83/LLaMA-33B-HF). You can perform inference using `infer.py`; simply replace the prompt and the corresponding model as needed.
+```shell
+python infer.py
+```
+使用eval_llm.py进行结果测试
+```shell
+python eval_llm.py
+```
+
+
