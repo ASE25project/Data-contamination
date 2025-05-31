@@ -1,7 +1,7 @@
 batch_size=32
 load_model=True
 
-tokenizer_path="/public/home/yangzhen/Data_Contamination/pretrain_model/init_model"
+tokenizer_path="./roberta_init_model"
 dataset1="./pre-train-data/train.jsonl"
 dataset2="./translate/test.jsonl"
 save_path=""
