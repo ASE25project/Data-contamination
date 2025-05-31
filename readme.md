@@ -76,14 +76,16 @@ Use the pretrained model for fine-tuning on downstream tasks and evaluate it on 
 bash run.sh
 bash score.sh
 ```
-
-
-
-
-
+Conduct further evaluation using eval_plm.py
+```shell
+python eval_plm.py
+```
 
 
 #### GPT2-small
+
+
+
 
 
 ## Large Language Model
