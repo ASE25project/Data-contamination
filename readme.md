@@ -61,10 +61,25 @@ Function:
 Please refer to the [result](./result.md) for the complete experimental results
 
 ## Pretrained Model
+The Java data used for pretraining can be obtained from [CodeSearchNet](https://huggingface.co/datasets/code-search-net/code_search_net/blob/main/data/java.zip). The dataset for the code translation task is available at [CodeTrans](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/code-to-code-trans/data), and the dataset for the code generation task can be found at [Concode](https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code/text-to-code/dataset/concode). For convenience, all datasets can also be found directly in the [dataset](./dataset) folder.
+
 
 #### RoBERTa-base
 
-预训练使用的java数据可在[CodeSearchNet](https://huggingface.co/datasets/code-search-net/code_search_net/blob/main/data/java.zip)上获得，代码翻译任务的数据可在[CodeTrans](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/code-to-code-trans/data)上获得，为了方便起见，我们将其转化为json line格式，可以在[pretrain](./dataset/pretrain)里直接找到。代码生成任务的数据可在[Concode](https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code/text-to-code/dataset/concode)上获得。
+Run `pretrain.sh` to perform model pretraining:
+```shell
+cd roberta/
+bash pretrain.sh
+```
+Use the pretrained model for fine-tuning on downstream tasks and evaluate it on the test set:
+```shell
+bash run.sh
+bash score.sh
+```
+
+
+
+
 
 
 

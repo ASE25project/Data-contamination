@@ -164,11 +164,11 @@ def main():
                         help="the init model`s path")
     parser.add_argument("--load_model", default=True, type=bool, required=False,
                         help="load init model or init self")
-    parser.add_argument("--R_Q", default=1, type=bool, required=False,
+    parser.add_argument("--R_Q", default=1, type=int, required=False,
                         help="")
-    parser.add_argument("--skip_line", default=1000, type=bool, required=False,
+    parser.add_argument("--skip_line", default=1000, type=int, required=False,
                         help="")
-    parser.add_argument("--Task", default=1, type=bool, required=False,
+    parser.add_argument("--Task", default=1, type=int, required=False,
                         help="")
     args = parser.parse_args()
 
