@@ -112,7 +112,15 @@ python metric.py
 ```
 
 For Code Generation
-
+Use pre_train.py for pre-training and determine the contamination type by modifying the task_type (1 for w/o contaminated, 2 for RQ1, 3 for RQ2, 4 for RQ3, 5 for RQ4).
+```shell
+cd gpt2/code_generation
+python pre_train.py
+```
+Use `finetune.py` to perform fine-tuning on downstream tasks. Modify the `mode` parameter as follows: `1` for without contamination, `2` for with contamination.
+```shell
+python finetune.py
+```
 
 ## Large Language Model
 
